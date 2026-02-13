@@ -11,11 +11,5 @@ fun main(args: Array<String>) {
     // Logic check
     checkSize(area)
 }
-
-fun checkSize(area: Double) {
-    if (area > 100) {
-        println("This is a Big Circle")
-    } else {
-        println("This is a Small Circle")
-    }
-}
+// kelewatan commit checkpoint 7
+fun checkSize(area: Double) = if (area > 100) "This is a Big Circle" else "This is a Small Circle"
