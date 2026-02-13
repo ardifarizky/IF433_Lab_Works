@@ -13,7 +13,7 @@ fun main() {
         else -> "D"
     }
     println("Grade kamu: $grade")
-    println("Status: ${calculateStatus()}")
+    println("Status: ${calculateStatus(score)}")
 
     val studentId: String? = null
     val idLength = studentId?.length ?: 0
