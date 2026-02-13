@@ -2,7 +2,7 @@ package oop_133508_ArdifaRizkySaputra.week02
 
 import java.util.Scanner
 
-fun Main() {
+fun main() {
     val scanner = Scanner(System.`in`)
 
     println("--- APLIKASI PMB UMN ---")
