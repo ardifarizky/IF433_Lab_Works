@@ -6,3 +6,8 @@ fun main() {
 }
 
 fun calculateDiscount(price: Int): Int = if (price > 500000) (price * 0.20).toInt() else (price * 0.10).toInt()
+
+fun printReceipt(title: String, finalPrice: Int) {
+    println("Game : $title")
+    println("Total Harga : Rp $finalPrice")
+}
