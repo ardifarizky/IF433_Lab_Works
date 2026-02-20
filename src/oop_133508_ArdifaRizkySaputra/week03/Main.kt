@@ -2,6 +2,7 @@ package oop_133508_ArdifaRizkySaputra.week03
 
 fun main() {
     val e = Employee("Budi")
+
     e.salary = -5000
     e.salary = 500000
     println("Gaji: ${e.salary}")
