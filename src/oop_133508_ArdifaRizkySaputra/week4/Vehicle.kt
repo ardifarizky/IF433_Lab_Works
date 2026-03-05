@@ -1,17 +1,14 @@
 package oop_133508_ArdifaRizkySaputra.week4
 
-open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
+open class Vehicle(val brand: String) {
+    var speed: Int = 0
 
-    fun openTrunk() {
-        println("Bagasi mobil $brand dengan $numberOfDoors pintu dibuka.")
+    open fun accelerate() {
+        speed += 10
+        println("$brand melaju. Kecepatan: $speed km/jam")
     }
 
-    override fun honk() {
-        println("TIN TIN! Mobil $brand lewat!")
-    }
-
-    override fun accelerate() {
-        super.accelerate()
-        println("Mobil $brand menggunakan transmisi gigi untuk menambah kecepatan.")
+    open fun honk() {
+        println("Beep beep!")
     }
 }

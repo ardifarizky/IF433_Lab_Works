@@ -15,3 +15,4 @@ open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
         println("Mobil $brand menggunakan transmisi gigi untuk menambah kecepatan.")
     }
 }
+
