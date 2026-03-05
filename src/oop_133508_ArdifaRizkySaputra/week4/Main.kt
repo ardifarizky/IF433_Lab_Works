@@ -19,4 +19,12 @@ fun main() {
     myEV.accelerate()
     myEV.honk()
     myEV.openTrunk()
+
+    val managerKita = Manager(name = "Ardifa", baseSalary = 7000000)
+    managerKita.work()
+    println("Bonus Manager: Rp ${managerKita.calculateBonus()}")
+
+    val devKita = Developer(name = "Deza", baseSalary = 5000000, programmingLanguage = "Kotlin")
+    devKita.work()
+    println("Bonus Developer: Rp ${devKita.calculateBonus()}")
 }
