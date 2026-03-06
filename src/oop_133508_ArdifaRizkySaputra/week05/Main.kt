@@ -19,4 +19,8 @@ fun main() {
         }
         println("----")
     }
+    val mathHelper = MathHelper()
+    println(mathHelper.hitungLuas(67))
+    println(mathHelper.hitungLuas(6, 7))
+    println(mathHelper.hitungLuas(6.7))
 }
