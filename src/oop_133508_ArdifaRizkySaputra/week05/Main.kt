@@ -27,14 +27,23 @@ fun main() {
     println("----")
 
     val dompetDipa = EWallet(50000.0)
-    val kreditDipa = CreditCard(100000.0, 0.0)
+    val kreditDipa = CreditCard(100000.0)
 
     val daftarPembayaran: List<PaymentMethod> = listOf(dompetDipa, kreditDipa)
-
     val jumlahBayar = 75000.0
-    println("Memproses pembayaran sebesar: $jumlahBayar")
-    println("------------------------------------------")
 
     for (metode in daftarPembayaran) {
+        println("--- Memproses Metode: ${metode::class.simpleName} ---")
+
         metode.processPayment(jumlahBayar)
+
+        if (metode is EWallet) {
+            println("[Sistem] Mendeteksi EWallet. Saldo tidak cukup? Melakukan top up otomatis...")
+
+            metode.topUp(50000.0)
+
+            println("[Sistem] Mencoba pembayaran ulang setelah top up:")
+            metode.processPayment(jumlahBayar)
+        }
+    }
 }
