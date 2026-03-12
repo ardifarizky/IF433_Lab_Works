@@ -27,5 +27,14 @@ fun main() {
     println("----")
 
     val dompetDipa = EWallet(50000.0)
-    val kreditDiopa = CreditCard(100000.0, 0.0)
+    val kreditDipa = CreditCard(100000.0, 0.0)
+
+    val daftarPembayaran: List<PaymentMethod> = listOf(dompetDipa, kreditDipa)
+
+    val jumlahBayar = 75000.0
+    println("Memproses pembayaran sebesar: $jumlahBayar")
+    println("------------------------------------------")
+
+    for (metode in daftarPembayaran) {
+        metode.processPayment(jumlahBayar)
 }
