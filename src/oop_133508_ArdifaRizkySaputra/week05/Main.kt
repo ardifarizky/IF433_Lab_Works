@@ -23,4 +23,9 @@ fun main() {
     println(mathHelper.hitungLuas(67))
     println(mathHelper.hitungLuas(6, 7))
     println(mathHelper.hitungLuas(6.7))
+
+    println("----")
+
+    val dompetDipa = EWallet(50000.0)
+    val kreditDiopa = CreditCard(100000.0, 0.0)
 }
