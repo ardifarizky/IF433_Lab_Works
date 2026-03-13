@@ -29,4 +29,13 @@ fun main(){
     mySmartHome.addDevice(cctvGarasi)
     mySmartHome.activateSecurityMode()
     mySmartHome.turnOffAllSwitches()
+
+    println("\nSmart Home Hub")
+    val hub = SmartHomeHub()
+    println("=== Mendaftarkan Perangkat ke Hub ===")
+    hub.addDevice(lampuTamu)
+    hub.addDevice(googleNest)
+    hub.addDevice(cctvGarasi)
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
 }
