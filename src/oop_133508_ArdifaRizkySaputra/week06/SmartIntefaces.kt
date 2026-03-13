@@ -1,0 +1,20 @@
+package oop_133508_ArdifaRizkySaputra.week06
+
+// Interface dasar untuk identitas perangkat
+interface SmartDevice {
+    val id: String
+    val name: String
+}
+
+interface Switchable {
+    fun turnOn()
+    fun turnOff()
+}
+
+interface Recordable {
+    fun startRecord()
+
+    fun stopRecord() {
+        println("Perekaman dihentikan dan disimpan ke Cloud")
+    }
+}
