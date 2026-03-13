@@ -1,6 +1,6 @@
 package oop_133508_ArdifaRizkySaputra.week06
 
-interface camera {
+interface Camera {
     fun turnOn() {
         println("lensa kamera terbuka dan sensor aktif")
     }
