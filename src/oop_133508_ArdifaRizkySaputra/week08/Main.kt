@@ -1,5 +1,3 @@
-package oop_133508_ArdifaRizkySaputra.week08
-
 fun main() {
     println("=== TEST SAFE CALLS & ELVIS ===")
     val emptyOrder = Order(null, null)
@@ -26,4 +24,12 @@ fun main() {
         "Laptop",
         4500000.0
     )
+
+    for (item in mixedData) {
+        val text = item as? String
+
+        text?.let {
+            println("Ditemukan teks: ${it.uppercase()}")
+        }
+    }
 }
