@@ -1,4 +1,4 @@
-package oop_001_johnthor.week08
+package oop_133508_ArdifaRizkySaputra.week08
 
 class NotificationService {
     fun sendEmail(emailAddress: String) {
