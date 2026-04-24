@@ -12,5 +12,6 @@ fun main() {
         TradeLog("ETHUSDT", "SHORT", 20,  -2.5,  "OPEN")
     )
 
-    println("Trade history loaded: ${tradeHistory.size} entries")
+    val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
+    println("Closed Trades: ${closedTrades.size}")
 }
