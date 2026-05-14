@@ -9,3 +9,8 @@ fun String.addGreeting(): String {
 fun String.repeatTimes(n: Int): String {
     return this.repeat(n)
 }
+
+// Nullable receiver — 'this' bisa bernilai null, jadi harus ditangani
+fun String?.isNullOrEmptyCustom(): Boolean {
+    return this == null || this.isEmpty()
+}
