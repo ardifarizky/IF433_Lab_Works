@@ -22,7 +22,7 @@ fun main() {
         homeDevices.add(it)
     }
 
-    // Konfigurasi AC — gunakan run untuk inisialisasi dan return objek baru
+    // Konfigurasi AC
     val acUnit = run {
         SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 800)
     }
@@ -30,4 +30,11 @@ fun main() {
 
     // Tambah alat pakan peliharaan
     homeDevices.add(SmartDevice("Picolo's Auto Feeder", "Pet Care", true, 10))
+
+    // Pencarian Aman dengan let
+    println("\n=== DEVICE SEARCH ===")
+    val searchResult = homeDevices.find { it.category == "Camera" }
+    searchResult?.let {
+        println(it.diagnose())
+    }
 }
