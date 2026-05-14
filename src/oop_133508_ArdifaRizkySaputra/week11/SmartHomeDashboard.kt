@@ -37,4 +37,10 @@ fun main() {
     searchResult?.let {
         println(it.diagnose())
     }
+
+    // Format Summary dengan with
+    println("\n=== DASHBOARD SUMMARY ===")
+    with(homeDevices) {
+        println("Total perangkat terdaftar: ${this.size}")
+    }
 }
