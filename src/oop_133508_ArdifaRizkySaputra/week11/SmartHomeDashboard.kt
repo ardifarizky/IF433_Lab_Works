@@ -1,4 +1,3 @@
-// SmartHomeDashboard.kt
 package oop_133508_ArdifaRizkySaputra.week11
 
 fun main() {
@@ -48,4 +47,10 @@ fun main() {
     // Kalkulasi Daya dengan run
     val totalPower = homeDevices.run { sumOf { it.powerLoad } }
     println("Total konsumsi daya: $totalPower Watt")
+
+    // Eksekusi Dashboard — iterasi semua perangkat dan diagnose
+    println("\n=== FULL DEVICE DIAGNOSTICS ===")
+    homeDevices.forEach { device ->
+        println(device.diagnose())
+    }
 }
